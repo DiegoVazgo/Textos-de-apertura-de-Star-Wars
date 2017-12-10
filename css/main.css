@@ -44,3 +44,29 @@ p {
     margin-bottom: 3em;
     text-align: justify;
 }
+
+.menu {
+    width: 25%;
+    padding: 10px;
+    background-color: rgba(0,0,0,.8);
+    color: #FFF;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.episodio, .musica {
+    margin: 15px 0 15px 20px;
+    padding: 3px;
+}
+
+.select {
+    color: #F5F200;
+    border: 1px solid #F5F200;
+
+}
