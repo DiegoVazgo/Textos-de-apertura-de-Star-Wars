@@ -11,7 +11,7 @@ var uneDiv = document.getElementById('uneDiv'),
     laMarchaImperialDiv = document.getElementById('laMarchaImperialDiv'),
     cantinaDiv = document.getElementById('cantinaDiv'),
     audio = document.getElementById('audio'),
-    playPauseBtn = document.getElementById('playPauseBtn'),
+    playPausaBtn = document.getElementById('playPausaBtn'),
     reiniciarBtn = document.getElementById('reiniciarBtn'),
 
     nameH2 = document.getElementById('nameH2'),
@@ -29,11 +29,17 @@ lvdlsDiv.addEventListener('click', lvdlsF);
 eddlfDiv.addEventListener('click', eddlfF);
 lujDiv.addEventListener('click', lujF);
 
-/*temaPrincipalDiv.addEventListener('click', temaPrincipalF);
+temaPrincipalDiv.addEventListener('click', temaPrincipalF);
 laMarchaImperialDiv.addEventListener('click', laMarchaImperialF);
-cantinaDiv.addEventListener('click', cantinaF);*/
+cantinaDiv.addEventListener('click', cantinaF);
+playPausaBtn.addEventListener('click', playPausaF);
+reiniciarBtn.addEventListener('click', reiniciarF);
 
 function quitarSelectEpisodio(){
+    audio.pause();
+    playPausaBtn.classList.remove('fa-pause');
+    playPausaBtn.classList.add('fa-play');
+    audio.currentTime = 0;
     if(uneDiv.classList.contains('select')){
         uneDiv.classList.remove('select');
     }
@@ -58,6 +64,9 @@ function quitarSelectEpisodio(){
     else if(lujDiv.classList.contains('select')){
         lujDiv.classList.remove('select');
     }
+    playPausaBtn.classList.remove('fa-play');
+    playPausaBtn.classList.add('fa-pause');
+    audio.play();
 }
 
 function uneF(){
@@ -138,4 +147,57 @@ function lujF(){
     pUno.textContent = luj.textoUno;
     pDos.textContent = luj.textoDos;
     pTres.textContent = luj.textoTres;
+}
+
+function quitarSelectMusica(){
+    audio.pause();
+    audio.currentTime = 0;
+    if(temaPrincipalDiv.classList.contains('select')){
+        temaPrincipalDiv.classList.remove('select');
+    }
+    else if(laMarchaImperialDiv.classList.contains('select')){
+        laMarchaImperialDiv.classList.remove('select');
+    }
+    else if(cantinaDiv.classList.contains('select')){
+        cantinaDiv.classList.remove('select');
+    }
+}
+
+function temaPrincipalF(){
+    quitarSelectMusica();
+    temaPrincipalDiv.classList.add('select');
+    audio.src = 'mp3/TemaPrincipal.mp3';
+    audio.play();
+}
+
+function laMarchaImperialF(){
+    quitarSelectMusica();
+    laMarchaImperialDiv.classList.add('select');
+    audio.src = 'mp3/LaMarchaImperial.mp3';
+    audio.play();
+}
+
+function cantinaF(){
+    quitarSelectMusica();
+    cantinaDiv.classList.add('select');
+    audio.src = 'mp3/Cantina.mp3';
+    audio.play();
+}
+
+function playPausaF(){
+    if(audio.paused){
+        playPausaBtn.classList.remove('fa-play');
+        playPausaBtn.classList.add('fa-pause');
+        audio.play();
+    }else {
+        playPausaBtn.classList.remove('fa-pause');
+        playPausaBtn.classList.add('fa-play');
+        audio.pause();
+    }
+}
+
+function reiniciarF(){
+    audio.pause();
+    audio.currentTime = 0;
+    audio.play();
 }
