@@ -11,6 +11,8 @@ var uneDiv = document.getElementById('uneDiv'),
     laMarchaImperialDiv = document.getElementById('laMarchaImperialDiv'),
     cantinaDiv = document.getElementById('cantinaDiv'),
     audio = document.getElementById('audio'),
+    playPauseBtn = document.getElementById('playPauseBtn'),
+    reiniciarBtn = document.getElementById('reiniciarBtn'),
 
     nameH2 = document.getElementById('nameH2'),
     titleH2 = document.getElementById('titleH2'),
