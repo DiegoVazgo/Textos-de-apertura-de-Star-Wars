@@ -56,6 +56,10 @@ p {
     left: 0;
 }
 
+h4 {
+    cursor: default;
+}
+
 .pointer {
     cursor: pointer;
 }
@@ -65,12 +69,16 @@ p {
     padding: 3px;
 }
 
+h4::selection, .episodio::selection, .musica::selection, .fa::selection {
+    background: transparent;
+}
+
 .select {
     color: #F5F200;
     border: 1px solid #F5F200;
 }
 
-.fa:before {
+.fa::before {
     font-size: 24px;
     margin-left: 20px;
     margin-bottom: 5px;

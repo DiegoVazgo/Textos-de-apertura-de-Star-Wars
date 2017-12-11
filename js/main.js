@@ -13,12 +13,16 @@ var uneDiv = document.getElementById('uneDiv'),
     audio = document.getElementById('audio'),
     playPausaBtn = document.getElementById('playPausaBtn'),
     reiniciarBtn = document.getElementById('reiniciarBtn'),
+    bajarVolumenBtn = document.getElementById('bajarVolumenBtn'),
+    subirVolumenBtn = document.getElementById('subirVolumenBtn'),
 
     nameH2 = document.getElementById('nameH2'),
     titleH2 = document.getElementById('titleH2'),
     pUno = document.getElementById('pUno'),
     pDos = document.getElementById('pDos'),
     pTres = document.getElementById('pTres');
+
+audio.volume = 0.5;
 
 uneDiv.addEventListener('click', uneF);
 eicDiv.addEventListener('click', eicF);
@@ -34,6 +38,8 @@ laMarchaImperialDiv.addEventListener('click', laMarchaImperialF);
 cantinaDiv.addEventListener('click', cantinaF);
 playPausaBtn.addEventListener('click', playPausaF);
 reiniciarBtn.addEventListener('click', reiniciarF);
+bajarVolumenBtn.addEventListener('click', bajarVolumenF);
+subirVolumenBtn.addEventListener('click', subirVolumenF);
 
 function quitarSelectEpisodio(){
     audio.pause();
@@ -161,6 +167,8 @@ function quitarSelectMusica(){
     else if(cantinaDiv.classList.contains('select')){
         cantinaDiv.classList.remove('select');
     }
+    playPausaBtn.classList.remove('fa-play');
+    playPausaBtn.classList.add('fa-pause');
 }
 
 function temaPrincipalF(){
@@ -200,4 +208,12 @@ function reiniciarF(){
     audio.pause();
     audio.currentTime = 0;
     audio.play();
+}
+
+function bajarVolumenF(){
+    audio.volume -= 0.05;
+}
+
+function subirVolumenF(){
+    audio.volume += 0.05;
 }
