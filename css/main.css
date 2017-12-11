@@ -15,8 +15,8 @@ body {
 }
 
 .main {
-    width: 45%;
-    max-width: 45%;
+    width: 30%;
+    max-width: 30%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3em;
@@ -68,5 +68,4 @@ p {
 .select {
     color: #F5F200;
     border: 1px solid #F5F200;
-
 }
