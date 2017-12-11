@@ -88,8 +88,6 @@ function erdjF(){
     pTres.textContent = erdj.textoTres;
 }
 
-//
-
 function lafF(){
     quitarSelectEpisodio();
     lafDiv.classList.add('select');
