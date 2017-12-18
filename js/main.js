@@ -1,15 +1,15 @@
-var uneDiv = document.getElementById('uneDiv'),
-    eicDiv = document.getElementById('eicDiv'),
-    erdjDiv = document.getElementById('erdjDiv'),
-    lafDiv = document.getElementById('lafDiv'),
-    eadlcDiv = document.getElementById('eadlcDiv'),
-    lvdlsDiv = document.getElementById('lvdlsDiv'),
-    eddlfDiv = document.getElementById('eddlfDiv'),
-    lujDiv = document.getElementById('lujDiv'),
+var uneBtn = document.getElementById('uneBtn'),
+    eicBtn = document.getElementById('eicBtn'),
+    erdjBtn = document.getElementById('erdjBtn'),
+    lafBtn = document.getElementById('lafBtn'),
+    eadlcBtn = document.getElementById('eadlcBtn'),
+    lvdlsBtn = document.getElementById('lvdlsBtn'),
+    eddlfBtn = document.getElementById('eddlfBtn'),
+    lujBtn = document.getElementById('lujBtn'),
 
-    temaPrincipalDiv = document.getElementById('temaPrincipalDiv'),
-    laMarchaImperialDiv = document.getElementById('laMarchaImperialDiv'),
-    cantinaDiv = document.getElementById('cantinaDiv'),
+    temaPrincipalBtn = document.getElementById('temaPrincipalBtn'),
+    laMarchaImperialBtn = document.getElementById('laMarchaImperialBtn'),
+    cantinaBtn = document.getElementById('cantinaBtn'),
     audio = document.getElementById('audio'),
     playPausaBtn = document.getElementById('playPausaBtn'),
     reiniciarBtn = document.getElementById('reiniciarBtn'),
@@ -24,18 +24,19 @@ var uneDiv = document.getElementById('uneDiv'),
 
 audio.volume = 0.5;
 
-uneDiv.addEventListener('click', uneF);
-eicDiv.addEventListener('click', eicF);
-erdjDiv.addEventListener('click', erdjF);
-lafDiv.addEventListener('click', lafF);
-eadlcDiv.addEventListener('click', eadlcF);
-lvdlsDiv.addEventListener('click', lvdlsF);
-eddlfDiv.addEventListener('click', eddlfF);
-lujDiv.addEventListener('click', lujF);
+uneBtn.addEventListener('click', uneF);
+eicBtn.addEventListener('click', eicF);
+erdjBtn.addEventListener('click', erdjF);
+lafBtn.addEventListener('click', lafF);
+eadlcBtn.addEventListener('click', eadlcF);
+lvdlsBtn.addEventListener('click', lvdlsF);
+eddlfBtn.addEventListener('click', eddlfF);
+lujBtn.addEventListener('click', lujF);
 
-temaPrincipalDiv.addEventListener('click', temaPrincipalF);
-laMarchaImperialDiv.addEventListener('click', laMarchaImperialF);
-cantinaDiv.addEventListener('click', cantinaF);
+temaPrincipalBtn.addEventListener('click', temaPrincipalF);
+laMarchaImperialBtn.addEventListener('click', laMarchaImperialF);
+cantinaBtn.addEventListener('click', cantinaF);
+
 playPausaBtn.addEventListener('click', playPausaF);
 reiniciarBtn.addEventListener('click', reiniciarF);
 bajarVolumenBtn.addEventListener('click', bajarVolumenF);
@@ -46,29 +47,29 @@ function quitarSelectEpisodio(){
     playPausaBtn.classList.remove('fa-pause');
     playPausaBtn.classList.add('fa-play');
     audio.currentTime = 0;
-    if(uneDiv.classList.contains('select')){
-        uneDiv.classList.remove('select');
+    if(uneBtn.classList.contains('select')){
+        uneBtn.classList.remove('select');
     }
-    else if(eicDiv.classList.contains('select')){
-        eicDiv.classList.remove('select');
+    else if(eicBtn.classList.contains('select')){
+        eicBtn.classList.remove('select');
     }
-    else if(erdjDiv.classList.contains('select')){
-        erdjDiv.classList.remove('select');
+    else if(erdjBtn.classList.contains('select')){
+        erdjBtn.classList.remove('select');
     }
-    else if(lafDiv.classList.contains('select')){
-        lafDiv.classList.remove('select');
+    else if(lafBtn.classList.contains('select')){
+        lafBtn.classList.remove('select');
     }
-    else if(eadlcDiv.classList.contains('select')){
-        eadlcDiv.classList.remove('select');
+    else if(eadlcBtn.classList.contains('select')){
+        eadlcBtn.classList.remove('select');
     }
-    else if(lvdlsDiv.classList.contains('select')){
-        lvdlsDiv.classList.remove('select');
+    else if(lvdlsBtn.classList.contains('select')){
+        lvdlsBtn.classList.remove('select');
     }
-    else if(eddlfDiv.classList.contains('select')){
-        eddlfDiv.classList.remove('select');
+    else if(eddlfBtn.classList.contains('select')){
+        eddlfBtn.classList.remove('select');
     }
-    else if(lujDiv.classList.contains('select')){
-        lujDiv.classList.remove('select');
+    else if(lujBtn.classList.contains('select')){
+        lujBtn.classList.remove('select');
     }
     playPausaBtn.classList.remove('fa-play');
     playPausaBtn.classList.add('fa-pause');
@@ -77,7 +78,7 @@ function quitarSelectEpisodio(){
 
 function uneF(){
     quitarSelectEpisodio();
-    uneDiv.classList.add('select');
+    uneBtn.classList.add('select');
     nameH2.textContent = une.name;
     titleH2.textContent = une.title;
     pUno.textContent = une.textoUno;
@@ -87,7 +88,7 @@ function uneF(){
 
 function eicF(){
     quitarSelectEpisodio();
-    eicDiv.classList.add('select');
+    eicBtn.classList.add('select');
     nameH2.textContent = eic.name;
     titleH2.textContent = eic.title;
     pUno.textContent = eic.textoUno;
@@ -97,7 +98,7 @@ function eicF(){
 
 function erdjF(){
     quitarSelectEpisodio();
-    erdjDiv.classList.add('select');
+    erdjBtn.classList.add('select');
     nameH2.textContent = erdj.name;
     titleH2.textContent = erdj.title;
     pUno.textContent = erdj.textoUno;
@@ -107,7 +108,7 @@ function erdjF(){
 
 function lafF(){
     quitarSelectEpisodio();
-    lafDiv.classList.add('select');
+    lafBtn.classList.add('select');
     nameH2.textContent = laf.name;
     titleH2.textContent = laf.title;
     pUno.textContent = laf.textoUno;
@@ -117,7 +118,7 @@ function lafF(){
 
 function eadlcF(){
     quitarSelectEpisodio();
-    eadlcDiv.classList.add('select');
+    eadlcBtn.classList.add('select');
     nameH2.textContent = eadlc.name;
     titleH2.textContent = eadlc.title;
     pUno.textContent = eadlc.textoUno;
@@ -127,7 +128,7 @@ function eadlcF(){
 
 function lvdlsF(){
     quitarSelectEpisodio();
-    lvdlsDiv.classList.add('select');
+    lvdlsBtn.classList.add('select');
     nameH2.textContent = lvdls.name;
     titleH2.textContent = lvdls.title;
     pUno.textContent = lvdls.textoUno;
@@ -137,7 +138,7 @@ function lvdlsF(){
 
 function eddlfF(){
     quitarSelectEpisodio();
-    eddlfDiv.classList.add('select');
+    eddlfBtn.classList.add('select');
     nameH2.textContent = eddlf.name;
     titleH2.textContent = eddlf.title;
     pUno.textContent = eddlf.textoUno;
@@ -147,7 +148,7 @@ function eddlfF(){
 
 function lujF(){
     quitarSelectEpisodio();
-    lujDiv.classList.add('select');
+    lujBtn.classList.add('select');
     nameH2.textContent = luj.name;
     titleH2.textContent = luj.title;
     pUno.textContent = luj.textoUno;
@@ -158,14 +159,14 @@ function lujF(){
 function quitarSelectMusica(){
     audio.pause();
     audio.currentTime = 0;
-    if(temaPrincipalDiv.classList.contains('select')){
-        temaPrincipalDiv.classList.remove('select');
+    if(temaPrincipalBtn.classList.contains('select')){
+        temaPrincipalBtn.classList.remove('select');
     }
-    else if(laMarchaImperialDiv.classList.contains('select')){
-        laMarchaImperialDiv.classList.remove('select');
+    else if(laMarchaImperialBtn.classList.contains('select')){
+        laMarchaImperialBtn.classList.remove('select');
     }
-    else if(cantinaDiv.classList.contains('select')){
-        cantinaDiv.classList.remove('select');
+    else if(cantinaBtn.classList.contains('select')){
+        cantinaBtn.classList.remove('select');
     }
     playPausaBtn.classList.remove('fa-play');
     playPausaBtn.classList.add('fa-pause');
@@ -173,21 +174,21 @@ function quitarSelectMusica(){
 
 function temaPrincipalF(){
     quitarSelectMusica();
-    temaPrincipalDiv.classList.add('select');
+    temaPrincipalBtn.classList.add('select');
     audio.src = 'mp3/TemaPrincipal.mp3';
     audio.play();
 }
 
 function laMarchaImperialF(){
     quitarSelectMusica();
-    laMarchaImperialDiv.classList.add('select');
+    laMarchaImperialBtn.classList.add('select');
     audio.src = 'mp3/LaMarchaImperial.mp3';
     audio.play();
 }
 
 function cantinaF(){
     quitarSelectMusica();
-    cantinaDiv.classList.add('select');
+    cantinaBtn.classList.add('select');
     audio.src = 'mp3/Cantina.mp3';
     audio.play();
 }
