@@ -1,3 +1,5 @@
+//Todos los textos de cada una de las peliculas de Star Wars en un JSON
+//Obtenidos de http://es.starwars.wikia.com
     // une = Una Nueva Esperanza
 var une = {
         name: 'Episodio IV',
@@ -58,7 +60,7 @@ var une = {
     luj = {
         name: 'Episodio VIII',
         title: 'Los Últimos Jedi',
-        textoUno: '*Sin Información*',
-        textoDos: '*Sin Información*',
-        textoTres: '*Sin Información*'
+        textoUno: 'La PRIMERA ORDEN impera. Luego de destruir a la pacífica República, el Líder Supremo Snoke ahora envía a sus despiadadas legiones a asumir el control militar de la galaxia.',
+        textoDos: 'Sólo la general Leia Organa y su grupo de combatientes de la RESISTENCIA se oponen a la creciente tiranía, convencidos de que el Maestro Jedi Luke Skywalker regresará y restaurará la chispa de esperanza en la lucha.',
+        textoTres: 'Pero la Resistencia ha sido expuesta. Mientras la Primera Orden se dirige hacia la base rebelde, los valientes héroes organizan un desesperado escape...'
     };

@@ -1,3 +1,4 @@
+//Obteniendo nodos del DOM para poder modificarlos después
 var uneBtn = document.getElementById('uneBtn'),
     eicBtn = document.getElementById('eicBtn'),
     erdjBtn = document.getElementById('erdjBtn'),
@@ -22,8 +23,7 @@ var uneBtn = document.getElementById('uneBtn'),
     pDos = document.getElementById('pDos'),
     pTres = document.getElementById('pTres');
 
-audio.volume = 0.5;
-
+//Se agrega un Event Listener para poder cambiar el texto
 uneBtn.addEventListener('click', uneF);
 eicBtn.addEventListener('click', eicF);
 erdjBtn.addEventListener('click', erdjF);
@@ -33,15 +33,19 @@ lvdlsBtn.addEventListener('click', lvdlsF);
 eddlfBtn.addEventListener('click', eddlfF);
 lujBtn.addEventListener('click', lujF);
 
+//Se agrega un Event Listener para poder cambiar la música
 temaPrincipalBtn.addEventListener('click', temaPrincipalF);
 laMarchaImperialBtn.addEventListener('click', laMarchaImperialF);
 cantinaBtn.addEventListener('click', cantinaF);
 
+//Se agrega un Event Listener para poder controlar la música
 playPausaBtn.addEventListener('click', playPausaF);
 reiniciarBtn.addEventListener('click', reiniciarF);
 bajarVolumenBtn.addEventListener('click', bajarVolumenF);
 subirVolumenBtn.addEventListener('click', subirVolumenF);
 
+//Lo siguiente es para cambiar los textos por el de cada película
+//Función para poder quitar la clase select del nombre del episodio
 function quitarSelectEpisodio(){
     audio.pause();
     playPausaBtn.classList.remove('fa-pause');
@@ -76,6 +80,7 @@ function quitarSelectEpisodio(){
     audio.play();
 }
 
+//Función que cambia el texto por el de Una Nueva Esperanza
 function uneF(){
     quitarSelectEpisodio();
     uneBtn.classList.add('select');
@@ -86,6 +91,7 @@ function uneF(){
     pTres.textContent = une.textoTres;
 }
 
+//Función que cambia el texto por el de El Imperio Contraataca
 function eicF(){
     quitarSelectEpisodio();
     eicBtn.classList.add('select');
@@ -96,6 +102,7 @@ function eicF(){
     pTres.textContent = eic.textoTres;
 }
 
+//Función que cambia el texto por el de El Retorno del Jedi
 function erdjF(){
     quitarSelectEpisodio();
     erdjBtn.classList.add('select');
@@ -106,6 +113,7 @@ function erdjF(){
     pTres.textContent = erdj.textoTres;
 }
 
+//Función que cambia el texto por el de La Amenaza Fantasma
 function lafF(){
     quitarSelectEpisodio();
     lafBtn.classList.add('select');
@@ -116,6 +124,7 @@ function lafF(){
     pTres.textContent = laf.textoTres;
 }
 
+//Función que cambia el texto por el de El Ataque de los Clones
 function eadlcF(){
     quitarSelectEpisodio();
     eadlcBtn.classList.add('select');
@@ -126,6 +135,7 @@ function eadlcF(){
     pTres.textContent = eadlc.textoTres;
 }
 
+//Función que cambia el texto por el de La Venganza de los Sith
 function lvdlsF(){
     quitarSelectEpisodio();
     lvdlsBtn.classList.add('select');
@@ -136,6 +146,7 @@ function lvdlsF(){
     pTres.textContent = lvdls.textoTres;
 }
 
+//Función que cambia el texto por el de El Despertar de la Fuerza
 function eddlfF(){
     quitarSelectEpisodio();
     eddlfBtn.classList.add('select');
@@ -146,6 +157,7 @@ function eddlfF(){
     pTres.textContent = eddlf.textoTres;
 }
 
+//Función que cambia el texto por el de Los Últimos Jedi
 function lujF(){
     quitarSelectEpisodio();
     lujBtn.classList.add('select');
@@ -156,6 +168,11 @@ function lujF(){
     pTres.textContent = luj.textoTres;
 }
 
+//Lo siguiente es para poder cambiar y controlar la música
+//Se fija el volumen del audio a la mitad
+audio.volume = 0.5;
+
+//Función para poder quitar la clase select del nombre de la música
 function quitarSelectMusica(){
     audio.pause();
     audio.currentTime = 0;
@@ -172,6 +189,7 @@ function quitarSelectMusica(){
     playPausaBtn.classList.add('fa-pause');
 }
 
+//Función que cambia la cancion por el Tema Principal
 function temaPrincipalF(){
     quitarSelectMusica();
     temaPrincipalBtn.classList.add('select');
@@ -179,6 +197,7 @@ function temaPrincipalF(){
     audio.play();
 }
 
+//Función que cambia la cancion por La Marcha Imperial
 function laMarchaImperialF(){
     quitarSelectMusica();
     laMarchaImperialBtn.classList.add('select');
@@ -186,6 +205,7 @@ function laMarchaImperialF(){
     audio.play();
 }
 
+//Función que cambia la cancion por la cancon de la Cantina
 function cantinaF(){
     quitarSelectMusica();
     cantinaBtn.classList.add('select');
@@ -193,6 +213,7 @@ function cantinaF(){
     audio.play();
 }
 
+//Función que cambia el ícono de play o pausa según sea el estado del audio
 function playPausaF(){
     if(audio.paused){
         playPausaBtn.classList.remove('fa-play');
@@ -205,16 +226,19 @@ function playPausaF(){
     }
 }
 
+//Función que reinicia el audio solo si el usuario lo desea
 function reiniciarF(){
     audio.pause();
     audio.currentTime = 0;
     audio.play();
 }
 
+//Función de bajar el volumen al audio
 function bajarVolumenF(){
     audio.volume -= 0.05;
 }
 
+//Función de subir el volumen al audio
 function subirVolumenF(){
     audio.volume += 0.05;
 }
