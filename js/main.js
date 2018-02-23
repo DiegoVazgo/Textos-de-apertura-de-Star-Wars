@@ -17,8 +17,8 @@ var uneBtn = document.getElementById('uneBtn'),
     bajarVolumenBtn = document.getElementById('bajarVolumenBtn'),
     subirVolumenBtn = document.getElementById('subirVolumenBtn'),
 
-    nameH2 = document.getElementById('nameH2'),
-    titleH2 = document.getElementById('titleH2'),
+    nombreH2 = document.getElementById('nombreH2'),
+    tituloH2 = document.getElementById('tituloH2'),
     pUno = document.getElementById('pUno'),
     pDos = document.getElementById('pDos'),
     pTres = document.getElementById('pTres');
@@ -47,7 +47,6 @@ subirVolumenBtn.addEventListener('click', subirVolumenF);
 //Lo siguiente es para cambiar los textos por el de cada película
 //Función para poder quitar la clase select del nombre del episodio
 function quitarSelectEpisodio(){
-    audio.pause();
     playPausaBtn.classList.remove('fa-pause');
     playPausaBtn.classList.add('fa-play');
     audio.currentTime = 0;
@@ -75,17 +74,14 @@ function quitarSelectEpisodio(){
     else if(lujBtn.classList.contains('select')){
         lujBtn.classList.remove('select');
     }
-    playPausaBtn.classList.remove('fa-play');
-    playPausaBtn.classList.add('fa-pause');
-    audio.play();
 }
 
 //Función que cambia el texto por el de Una Nueva Esperanza
 function uneF(){
     quitarSelectEpisodio();
     uneBtn.classList.add('select');
-    nameH2.textContent = une.name;
-    titleH2.textContent = une.title;
+    nombreH2.textContent = une.name;
+    tituloH2.textContent = une.title;
     pUno.textContent = une.textoUno;
     pDos.textContent = une.textoDos;
     pTres.textContent = une.textoTres;
@@ -95,8 +91,8 @@ function uneF(){
 function eicF(){
     quitarSelectEpisodio();
     eicBtn.classList.add('select');
-    nameH2.textContent = eic.name;
-    titleH2.textContent = eic.title;
+    nombreH2.textContent = eic.name;
+    tituloH2.textContent = eic.title;
     pUno.textContent = eic.textoUno;
     pDos.textContent = eic.textoDos;
     pTres.textContent = eic.textoTres;
@@ -106,8 +102,8 @@ function eicF(){
 function erdjF(){
     quitarSelectEpisodio();
     erdjBtn.classList.add('select');
-    nameH2.textContent = erdj.name;
-    titleH2.textContent = erdj.title;
+    nombreH2.textContent = erdj.name;
+    tituloH2.textContent = erdj.title;
     pUno.textContent = erdj.textoUno;
     pDos.textContent = erdj.textoDos;
     pTres.textContent = erdj.textoTres;
@@ -117,8 +113,8 @@ function erdjF(){
 function lafF(){
     quitarSelectEpisodio();
     lafBtn.classList.add('select');
-    nameH2.textContent = laf.name;
-    titleH2.textContent = laf.title;
+    nombreH2.textContent = laf.name;
+    tituloH2.textContent = laf.title;
     pUno.textContent = laf.textoUno;
     pDos.textContent = laf.textoDos;
     pTres.textContent = laf.textoTres;
@@ -128,8 +124,8 @@ function lafF(){
 function eadlcF(){
     quitarSelectEpisodio();
     eadlcBtn.classList.add('select');
-    nameH2.textContent = eadlc.name;
-    titleH2.textContent = eadlc.title;
+    nombreH2.textContent = eadlc.name;
+    tituloH2.textContent = eadlc.title;
     pUno.textContent = eadlc.textoUno;
     pDos.textContent = eadlc.textoDos;
     pTres.textContent = eadlc.textoTres;
@@ -139,8 +135,8 @@ function eadlcF(){
 function lvdlsF(){
     quitarSelectEpisodio();
     lvdlsBtn.classList.add('select');
-    nameH2.textContent = lvdls.name;
-    titleH2.textContent = lvdls.title;
+    nombreH2.textContent = lvdls.name;
+    tituloH2.textContent = lvdls.title;
     pUno.textContent = lvdls.textoUno;
     pDos.textContent = lvdls.textoDos;
     pTres.textContent = lvdls.textoTres;
@@ -150,8 +146,8 @@ function lvdlsF(){
 function eddlfF(){
     quitarSelectEpisodio();
     eddlfBtn.classList.add('select');
-    nameH2.textContent = eddlf.name;
-    titleH2.textContent = eddlf.title;
+    nombreH2.textContent = eddlf.name;
+    tituloH2.textContent = eddlf.title;
     pUno.textContent = eddlf.textoUno;
     pDos.textContent = eddlf.textoDos;
     pTres.textContent = eddlf.textoTres;
@@ -161,8 +157,8 @@ function eddlfF(){
 function lujF(){
     quitarSelectEpisodio();
     lujBtn.classList.add('select');
-    nameH2.textContent = luj.name;
-    titleH2.textContent = luj.title;
+    nombreH2.textContent = luj.name;
+    tituloH2.textContent = luj.title;
     pUno.textContent = luj.textoUno;
     pDos.textContent = luj.textoDos;
     pTres.textContent = luj.textoTres;
@@ -185,8 +181,8 @@ function quitarSelectMusica(){
     else if(cantinaBtn.classList.contains('select')){
         cantinaBtn.classList.remove('select');
     }
-    playPausaBtn.classList.remove('fa-play');
-    playPausaBtn.classList.add('fa-pause');
+    playPausaBtn.classList.remove('fa-pause');
+    playPausaBtn.classList.add('fa-play');
 }
 
 //Función que cambia la cancion por el Tema Principal
@@ -194,7 +190,6 @@ function temaPrincipalF(){
     quitarSelectMusica();
     temaPrincipalBtn.classList.add('select');
     audio.src = 'mp3/TemaPrincipal.mp3';
-    audio.play();
 }
 
 //Función que cambia la cancion por La Marcha Imperial
@@ -202,7 +197,6 @@ function laMarchaImperialF(){
     quitarSelectMusica();
     laMarchaImperialBtn.classList.add('select');
     audio.src = 'mp3/LaMarchaImperial.mp3';
-    audio.play();
 }
 
 //Función que cambia la cancion por la cancon de la Cantina
@@ -210,7 +204,6 @@ function cantinaF(){
     quitarSelectMusica();
     cantinaBtn.classList.add('select');
     audio.src = 'mp3/Cantina.mp3';
-    audio.play();
 }
 
 //Función que cambia el ícono de play o pausa según sea el estado del audio

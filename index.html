@@ -11,41 +11,35 @@
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     </head>
     <body>
-        <section class="menu">
-            <h4>Selección del Episodio</h4>
-            <div class="episodio pointer" id="uneBtn">Una Nueva Esperanza</div>
-            <div class="episodio pointer" id="eicBtn">El Imperio Contraataca</div>
-            <div class="episodio pointer" id="erdjBtn">El Retorno del Jedi</div>
-            <div class="episodio pointer" id="lafBtn">La Amenaza Fantasma</div>
-            <div class="episodio pointer" id="eadlcBtn">El Ataque de los Clones</div>
-            <div class="episodio pointer" id="lvdlsBtn">La Venganza de los Sith</div>
-            <div class="episodio pointer" id="eddlfBtn">El Despertar de la Fuerza</div>
-            <div class="episodio pointer" id="lujBtn">Los Últimos Jedi</div>
+        <nav class="menu">
+            <h3>Selección del Episodio</h3>
+            <button class="episodio pointer select" id="uneBtn">Una Nueva Esperanza</button>
+            <button class="episodio pointer" id="eicBtn">El Imperio Contraataca</button>
+            <button class="episodio pointer" id="erdjBtn">El Retorno del Jedi</button>
+            <button class="episodio pointer" id="lafBtn">La Amenaza Fantasma</button>
+            <button class="episodio pointer" id="eadlcBtn">El Ataque de los Clones</button>
+            <button class="episodio pointer" id="lvdlsBtn">La Venganza de los Sith</button>
+            <button class="episodio pointer" id="eddlfBtn">El Despertar de la Fuerza</button>
+            <button class="episodio pointer" id="lujBtn">Los Últimos Jedi</button>
 
-            <h4>Selección de la Música</h4>
-            <div class="musica pointer select" id="temaPrincipalBtn">Tema Principal</div>
-            <div class="musica pointer" id="laMarchaImperialBtn">La Marcha Imperial</div>
-            <div class="musica pointer" id="cantinaBtn">Cantina</div>
+            <h3>Selección de la Música</h3>
+            <button class="musica pointer select" id="temaPrincipalBtn">Tema Principal</button>
+            <button class="musica pointer" id="laMarchaImperialBtn">La Marcha Imperial</button>
+            <button class="musica pointer" id="cantinaBtn">Cantina</button>
             <audio src="mp3/TemaPrincipal.mp3" id="audio" loop></audio>
             <i class="fa fa-play pointer" id="playPausaBtn"></i>
             <i class="fa fa-repeat pointer" id="reiniciarBtn"></i>
             <i class="fa fa-volume-down pointer" id="bajarVolumenBtn"></i>
             <i class="fa fa-volume-up pointer" id="subirVolumenBtn"></i>
-        </section>
+        </nav>
 
-        <main class="main">
-            <div class="starwarsImage"></div>
-            <div class="nameDiv">
-                <h2 id="nameH2">Episodio 0</h2>
-            </div>
-            <div class="titleDiv">
-                <h2 id="titleH2">El Texto de Prueba</h2>
-            </div>
-            <div class="textoDiv">
-                <p class="texto" id="pUno">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero molestiae unde nostrum cum nesciunt et ex excepturi, ullam reiciendis mollitia eveniet dicta repellendus quasi quisquam eaque in totam maxime non consequatur, sit consequuntur amet nam sapiente voluptatem sed? Quibusdam beatae nesciunt accusantium cumque consequatur aut voluptas vitae nostrum, unde repudiandae!</p>
-                <p class="texto" id="pDos">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi sunt aliquam obcaecati harum voluptate perspiciatis veritatis vero fugit totam. Atque eveniet repellat vel architecto consectetur aliquid dolorem optio nostrum repellendus, delectus, tempora sint veritatis amet! Quibusdam, voluptatum cumque. Nulla itaque possimus, aspernatur obcaecati animi fuga ex esse enim nostrum excepturi.</p>
-                <p class="texto" id="pTres">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est officia eum consequuntur cumque quibusdam nisi optio repellendus harum eaque aspernatur, ab totam facere magni obcaecati possimus rerum ipsam corporis, deleniti, cum reiciendis! Reprehenderit architecto dolor blanditiis eum itaque ab, officiis culpa labore, nobis aliquam et maxime! Obcaecati voluptatum sequi sint.</p>
-            </div> 
+        <main>
+            <div class="starwarsImagen"></div>
+            <h2 id="nombreH2">Episodio IV</h2>
+            <h2 id="tituloH2">Una Nueva Esperanza</h2>
+            <p id="pUno">Son tiempos de guerra civil. Naves rebeldes han atacado desde una base secreta y han obtenido su primera victoria contra el malvado Imperio Galáctico.</p>
+            <p id="pDos">Durante la batalla, espías rebeldes lograron robar los planos secretos del arma más extrema del Imperio, la ESTRELLA DE LA MUERTE, una estación espacial blindada con suficiente potencia para destruir un planeta entero.</p>
+            <p id="pTres">Perseguida por los siniestros agentes del Imperio, la Princesa Leia se dirige velozmente a casa en su nave espacial, mientras resguarda los planos que pueden salvar a su pueblo y restaurar la libertad en la galaxia...</p>
         </main>
 
         <script src="js/textos.js"></script>
