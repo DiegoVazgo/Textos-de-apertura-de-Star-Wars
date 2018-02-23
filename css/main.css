@@ -19,7 +19,7 @@ body {
 }
 
 /*Estilos del main y todo lo que contiene*/
-main {
+.starWarsContainer {
     width: 30%;
     max-width: 30%;
     margin-left: auto;
@@ -40,11 +40,11 @@ main {
     overflow: auto;
 }
 
-h2 {
+#nombreH2,#tituloH2 {
     margin-bottom: 1.5em;
 }
 
-p {
+#pUno,#pDos,#pTres {
     font-weight: 700;   
     margin-bottom: 3em;
     text-align: justify;
@@ -62,21 +62,10 @@ p {
     left: 0;
 }
 
-h3 {
+.tituloMenu {
     cursor: default;
     font-size: 1em;
     margin-bottom: 1.5em;
-}
-
-button {
-    display: block;
-    background: transparent;
-    border: none;
-    font-size: 1em;
-}
-
-button:focus {
-    outline: none;
 }
 
 .pointer {
@@ -87,9 +76,17 @@ button:focus {
     color: #FFF;
     margin: 15px 0 15px 20px;
     padding: 3px;
+    display: block;
+    background: transparent;
+    border: none;
+    font-size: 1em;
 }
 
-h3::selection, .episodio::selection, .musica::selection, .fa::selection {
+.episodio:focus,.musica:focus {
+    outline: none;
+}
+
+.tituloMenu::selection,.episodio::selection,.musica::selection,.fa::selection {
     background: transparent;
 }
 
