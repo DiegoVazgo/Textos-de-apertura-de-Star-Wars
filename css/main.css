@@ -86,12 +86,11 @@ body {
     outline: none;
 }
 
-.tituloMenu::selection,.episodio::selection,.musica::selection,.fa::selection {
+.tituloMenu::selection,.episodio::selection,.musica::selection {
     background: transparent;
 }
 
-.fa::before {
-    font-size: 24px;
+.svg-inline--fa {
     margin-left: 20px;
     margin-bottom: 5px;
 }

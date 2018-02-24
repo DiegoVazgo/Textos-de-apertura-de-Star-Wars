@@ -5,7 +5,7 @@
         <meta name ="author" content ="Diego Efrén Vázquez Gómez">
         <title>Textos de apertura de Star Wars</title>
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <meta name="description" content="En esta pagina se muestran los textos de apertura de todas las peliculas de Star Wars hasta la fecha">
         <meta name="keywords" content="Star Wars, Star, Wars, Textos, Apertura">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -13,24 +13,25 @@
     <body>
         <nav class="menu">
             <h3 class="tituloMenu">Selección del Episodio</h3>
-            <button class="episodio pointer select" id="uneBtn">Una Nueva Esperanza</button>
-            <button class="episodio pointer" id="eicBtn">El Imperio Contraataca</button>
-            <button class="episodio pointer" id="erdjBtn">El Retorno del Jedi</button>
-            <button class="episodio pointer" id="lafBtn">La Amenaza Fantasma</button>
-            <button class="episodio pointer" id="eadlcBtn">El Ataque de los Clones</button>
-            <button class="episodio pointer" id="lvdlsBtn">La Venganza de los Sith</button>
-            <button class="episodio pointer" id="eddlfBtn">El Despertar de la Fuerza</button>
-            <button class="episodio pointer" id="lujBtn">Los Últimos Jedi</button>
+            <button class="episodio pointer select" id="uneBtn" title="Una Nueva Esperanza">Una Nueva Esperanza</button>
+            <button class="episodio pointer" id="eicBtn" title="El Imperio Contraataca">El Imperio Contraataca</button>
+            <button class="episodio pointer" id="erdjBtn" title="El Retorno del Jedi">El Retorno del Jedi</button>
+            <button class="episodio pointer" id="lafBtn" title="La Amenaza Fantasma">La Amenaza Fantasma</button>
+            <button class="episodio pointer" id="eadlcBtn" title="El Ataque de los Clones">El Ataque de los Clones</button>
+            <button class="episodio pointer" id="lvdlsBtn" title="La Venganza de los Sith">La Venganza de los Sith</button>
+            <button class="episodio pointer" id="eddlfBtn" title="El Despertar de la Fuerza">El Despertar de la Fuerza</button>
+            <button class="episodio pointer" id="lujBtn" title="Los Últimos Jedi">Los Últimos Jedi</button>
 
             <h3 class="tituloMenu">Selección de la Música</h3>
-            <button class="musica pointer select" id="temaPrincipalBtn">Tema Principal</button>
-            <button class="musica pointer" id="laMarchaImperialBtn">La Marcha Imperial</button>
-            <button class="musica pointer" id="cantinaBtn">Cantina</button>
+            <button class="musica pointer select" id="temaPrincipalBtn" title="Tema Principal">Tema Principal</button>
+            <button class="musica pointer" id="laMarchaImperialBtn" title="La Marcha Imperial">La Marcha Imperial</button>
+            <button class="musica pointer" id="cantinaBtn" title="Cantina">Cantina</button>
             <audio src="mp3/TemaPrincipal.mp3" id="audio" loop></audio>
-            <i class="fa fa-play pointer" id="playPausaBtn"></i>
-            <i class="fa fa-repeat pointer" id="reiniciarBtn"></i>
-            <i class="fa fa-volume-down pointer" id="bajarVolumenBtn"></i>
-            <i class="fa fa-volume-up pointer" id="subirVolumenBtn"></i>
+            <i class="fas fa-2x fa-play pointer" id="playPausaBtn" title="Play-Pausa"></i>
+            <i class="fas fa-2x fa-undo pointer" id="reiniciarBtn" title="Reiniciar"></i>
+            <i class="fas fa-2x fa-volume-down pointer" id="bajarVolumenBtn" title="Bajar Volumen"></i>
+            <i class="fas fa-2x fa-volume-up pointer" id="subirVolumenBtn" title="Subir Volumen"></i>
+            <!-- i.fas.fa-times.pointer#quitarMusicaBtn -->
         </nav>
 
         <main class="starWarsContainer">
