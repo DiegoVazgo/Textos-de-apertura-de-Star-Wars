@@ -72,7 +72,7 @@ body {
     cursor: pointer;
 }
 
-.episodio, .musica {
+.episodio,.musica {
     color: #FFF;
     margin: 15px 0 15px 20px;
     padding: 3px;
@@ -90,7 +90,7 @@ body {
     background: transparent;
 }
 
-.svg-inline--fa {
+i::before {
     margin-left: 20px;
     margin-bottom: 5px;
 }

@@ -222,6 +222,15 @@ function playPausaF(){
 //Función que reinicia el audio solo si el usuario lo desea
 function reiniciarF(){
     audio.pause();
+    if(playPausaBtn.classList.contains('fa-pause')){
+        playPausaBtn.classList.remove('fa-pause');
+        playPausaBtn.classList.add('fa-play');
+        playPausaBtn.classList.remove('fa-play');
+        playPausaBtn.classList.add('fa-pause');
+    } else if(playPausaBtn.classList.contains('fa-play')){
+        playPausaBtn.classList.remove('fa-play');
+        playPausaBtn.classList.add('fa-pause');
+    }
     audio.currentTime = 0;
     audio.play();
 }
