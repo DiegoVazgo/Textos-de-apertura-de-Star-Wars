@@ -27,17 +27,8 @@ body {
     margin-top: 3em;
 }
 
-.starwarsImagen {
+.starwarsSVG {
     width: 22vw;
-    max-width: 22vw;
-    min-height: 18vh;
-    background-image: url('../img/swlogo.png');
-    background-size: cover;
-    background-position: center center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2em;
-    overflow: auto;
 }
 
 #nombreH2,#tituloH2 {
